@@ -35,9 +35,14 @@ const Navbar = () => {
         <ul className="navbar-nav mx-auto">
           {links.map(link => (
             <li key={link.id} className="nav-item">
-              {link.text}
+              <Link to={link.path} className="nav-link text-capitalize">
+                {link.text}
+              </Link>
             </li>
           ))}
+          <li className="nav-item ms-sm-5">
+            <FaCartArrowDown className="cart-icon"></FaCartArrowDown>
+          </li>
         </ul>
       </div>
     </nav>
