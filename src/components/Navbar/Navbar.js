@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../../images/gatsby-icon.png"
+import logo from "../../images/logo.svg"
 import { FaCartArrowDown } from "react-icons/fa"
 import { useState } from "react"
 
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-light navbar-light">
       <Link to="/" className="navbar-brand">
-        {/* <img src={logo}></img> */}
+        <img src={logo}></img>
       </Link>
       <Link to="/about" className="navbar-brand"></Link>
       <button className="navbar-toggler" type="button" onClick={navbarHandler}>
