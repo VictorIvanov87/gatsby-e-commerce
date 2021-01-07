@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 const Menu = ({ items }) => {
   const [allItems, setAllItems] = useState(items.edges)
-  const [coffeeItems, setCoffeeItems] = useState(items.edges)
+  const [itemsToRender, setItemsToRender] = useState(items.edges)
   const [categories, setCategories] = useState([])
 
   const getAllCategories = () => {
@@ -20,13 +20,40 @@ const Menu = ({ items }) => {
     setCategories(getAllCategories())
   }, [])
 
+  const handleItems = category => {
+    let tempItems = allItems
+
+    if (category === "all") {
+      setItemsToRender(tempItems)
+    } else {
+      tempItems = allItems.filter(item => item.node.category === category)
+      setItemsToRender(tempItems)
+    }
+  }
+
   if (allItems.length > 0) {
     return (
       <section className="menu py-5">
         <div className="container">
           <Title title="best of our menu"></Title>
+          <div className="row mb-5">
+            <div className="col-10 mx-auto text-center">
+              {categories.map((category, i) => {
+                return (
+                  <button
+                    type="btn"
+                    key={i}
+                    className="btn btn-yellow text-capitalize m-3"
+                    onClick={() => handleItems(category)}
+                  >
+                    {category}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
           <div className="row">
-            {coffeeItems.map(({ node }) => {
+            {itemsToRender.map(({ node }) => {
               return (
                 <div className="col-12 col-md-6 my-3 d-flex" key={node.id}>
                   <div>
