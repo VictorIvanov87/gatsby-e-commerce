@@ -8,11 +8,12 @@ const Product = node => {
         <Img fluid={node.product.node.image.fluid} className="card-img-top" />
         <div className="card-body text-center d-flex flex-column justify-content-end">
           <h6>{node.product.node.title}</h6>
+          <h6>$ {node.product.node.price}</h6>
           <button
             className="snipcart-add-item btn btn-yellow mt-3 text-capitalize"
             data-item-id={node.product.node.id}
             data-item-price={node.product.node.price}
-			data-item-url="/paintings/starry-night"
+			data-item-url="https://coffee-shop-ecommerce.netlify.app/"
             data-item-image={node.product.node.src}
             data-item-name={node.product.node.title}
           >

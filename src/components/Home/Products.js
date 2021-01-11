@@ -10,7 +10,8 @@ const Products = () => {
         edges {
           node {
             id
-            title
+			title
+			price
             image {
               fluid(maxHeight: 426) {
                 src

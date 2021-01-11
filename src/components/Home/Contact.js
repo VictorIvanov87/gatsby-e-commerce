@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="col-10 col-sm-8 col-md-6 mx-auto">
         <form method="POST" action="https://formspree.io/viktorivanov87@gmail.com">
           <div className="formGroup">
-            <label htmlFor="name">Name</label>
+            <label className="my-1" htmlFor="name">Name</label>
             <input
               type="text"
               className="form-control"
@@ -18,7 +18,7 @@ const Contact = () => {
             />
           </div>
 		  <div className="formGroup">
-            <label htmlFor="email">Email</label>
+            <label className="my-1" htmlFor="email">Email</label>
             <input
               type="email"
               className="form-control"
@@ -28,7 +28,7 @@ const Contact = () => {
             />
           </div>
 		  <div className="formGroup">
-            <label htmlFor="decription">Decription</label>
+            <label className="my-1" htmlFor="decription">Decription</label>
             <textarea
               className="form-control"
               name="decription"
