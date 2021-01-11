@@ -41,7 +41,9 @@ const Navbar = () => {
             </li>
           ))}
           <li className="nav-item ms-sm-5">
-            <FaCartArrowDown className="cart-icon"></FaCartArrowDown>
+            <button className="snipcart-checkout">
+              <FaCartArrowDown className="cart-icon"></FaCartArrowDown>
+            </button>
           </li>
         </ul>
       </div>

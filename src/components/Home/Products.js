@@ -14,7 +14,7 @@ const Products = () => {
             image {
               fluid(maxHeight: 426) {
                 src
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid
               }
             }
           }
@@ -32,8 +32,8 @@ const Products = () => {
             <div className="container">
               <Title title="our products" />
               <div className="row">
-                {data.products.edges.map(node => {
-                  return <Product key={node.id} product={node} />
+                {data.products.edges.map(product => {
+                  return <Product key={product.node.id} product={product} />
                 })}
               </div>
             </div>

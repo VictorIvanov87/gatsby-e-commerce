@@ -7,6 +7,7 @@ import BackgroundSection from "../components/BackgroundSection/BackgroundSection
 import Info from "../components/Home/Info"
 import Menu from "../components/Home/Menu"
 import Products from "../components/Home/Products"
+import Contact from "../components/Home/Contact"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = ({ data }) => (
     <Info></Info>
     <Menu items={data.menu}></Menu>
     <Products />
+	<Contact />
   </Layout>
 )
 
@@ -38,7 +40,7 @@ export const query = graphql`
           title
           image {
             fixed(width: 50, height: 50) {
-              ...GatsbyContentfulFixed_tracedSVG
+              ...GatsbyContentfulFixed
             }
           }
           price
